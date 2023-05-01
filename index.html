@@ -11,19 +11,21 @@
 
   <title>Vue-Slider</title>
 </head>
-<body>
+<body id="app">
   
   <div class="main-wrapper">
     <div class="container">
       <div class="slider">
 
         <!-- buttons -->
-        <div class="btn-next up">&#11161;</div>
-        <div class="btn-prev down">&#11163;</div>
+        <div @click="nextPrev(false)" class="btn-next up">&#11161;</div>
+        <div @click="nextPrev(true)" class="btn-prev down">&#11163;</div>
 
         <!-- immagini -->
         <div class="items-container">
-          
+          <div>
+            <img :src="posters[counter]">
+          </div>
         </div>
 
       </div>
