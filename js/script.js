@@ -13,7 +13,8 @@ createApp({
         "04.webp",
         "05.webp"
       ],
-      counter: 0
+      counter: 0,
+      goAutoscroll: true
 
     }
   },
@@ -28,8 +29,8 @@ createApp({
 
     startAutoscroll() {
       setInterval(() => {
-        this.nextPrev(true)
-      }, 2000)
+        if (this.goAutoscroll) this.nextPrev(true)
+      }, 2600)
     }
   },
 
